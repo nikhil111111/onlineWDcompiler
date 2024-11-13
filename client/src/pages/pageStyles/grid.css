@@ -1,0 +1,31 @@
+.grid-bg {
+    width: 100vw; /* Full viewport width */
+    height: 100vh; /* Full viewport height */
+    background-color: #000000;
+
+    /* Grid settings */
+    --gap: 5em; /* Space between lines in the grid */
+    --line: 1px; /* Thickness of grid lines */
+    --color: rgba(255, 255, 255, 0.2); /* Grid line color with transparency */
+  
+    background-image: 
+      linear-gradient(
+        90deg,
+        transparent calc(var(--gap) - var(--line)),
+        var(--color) calc(var(--gap) - var(--line)),
+        var(--color) var(--gap)
+      ),
+      linear-gradient(
+        0deg,
+        transparent calc(var(--gap) - var(--line)),
+        var(--color) calc(var(--gap) - var(--line)),
+        var(--color) var(--gap)
+      );
+    background-size: var(--gap) var(--gap); /* Sets grid pattern repeat */
+}
+
+/* Additional styling to adjust Login text */
+.container > * {
+    margin: 10px; /* Adjust this as needed */
+    color: white; /* Adjust text color for visibility */
+}
